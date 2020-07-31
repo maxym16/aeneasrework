@@ -3,8 +3,8 @@ package com.aeneas.lang.contract.meta
 import cats.implicits._
 import com.google.protobuf.ByteString
 import com.aeneas.lang.v1.compiler.Types.FINAL
-import com.aeneas.protobuf.dapp.DAppMeta
-import com.aeneas.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.wavesplatform.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
 
 class FunctionTypeMapper(mapper: TypeBitMapper, version: MetaVersion) {
   def toProto(funcTypes: List[List[FINAL]]): Either[String, DAppMeta] =

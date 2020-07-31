@@ -19,7 +19,7 @@ import com.aeneas.lang.v1.compiler.Terms._
 import com.aeneas.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
 import com.aeneas.lang.v1.evaluator.ctx.impl.waves.WavesContext
 import com.aeneas.lang.v1.traits.Environment
-import com.aeneas.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta
 import com.aeneas.settings.{FunctionalitySettings, TestFunctionalitySettings}
 import com.aeneas.transaction.GenesisTransaction
 import com.aeneas.transaction.smart.SetScriptTransaction

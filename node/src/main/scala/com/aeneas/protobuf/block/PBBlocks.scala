@@ -5,8 +5,8 @@ import com.aeneas.account.{AddressScheme, PublicKey}
 import com.aeneas.block.BlockHeader
 import com.aeneas.common.state.ByteStr
 import com.aeneas.common.utils.EitherExt2
-import com.aeneas.protobuf.block.Block.{Header => PBHeader}
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.block.Block.{Header => PBHeader}
+import com.wavesplatform.protobuf.transaction.PBTransactions
 
 import scala.util.Try
 

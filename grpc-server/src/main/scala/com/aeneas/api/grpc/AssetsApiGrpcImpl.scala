@@ -4,7 +4,7 @@ import com.aeneas.account.Address
 import com.aeneas.api.common.{CommonAccountsApi, CommonAssetsApi}
 import com.aeneas.api.http.ApiError.TransactionDoesNotExist
 import com.aeneas.common.state.ByteStr
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.state.AssetScriptInfo
 import com.aeneas.state.AssetDescription
 import com.aeneas.transaction.Asset.IssuedAsset

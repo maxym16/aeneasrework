@@ -3,8 +3,8 @@ package com.aeneas.transaction.serialization.impl
 import java.nio.ByteBuffer
 
 import com.google.common.primitives.{Bytes, Longs}
-import com.aeneas.protobuf.transaction.PBOrders
-import com.aeneas.protobuf.utils.PBUtils
+import com.wavesplatform.protobuf.transaction.PBOrders
+import com.wavesplatform.protobuf.utils.PBUtils
 import com.aeneas.serialization.ByteBufferOps
 import com.aeneas.transaction.Proofs
 import com.aeneas.transaction.assets.exchange.{AssetPair, Order, OrderType}

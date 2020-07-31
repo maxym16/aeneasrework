@@ -4,7 +4,7 @@ import com.aeneas.common.utils.EitherExt2
 import com.aeneas.it.api.SyncGrpcApi._
 import com.aeneas.it.sync._
 import com.aeneas.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.transaction.smart.script.ScriptCompiler
 import io.grpc.Status.Code
 

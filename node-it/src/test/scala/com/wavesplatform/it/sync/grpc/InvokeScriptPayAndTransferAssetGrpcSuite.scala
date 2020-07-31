@@ -7,8 +7,8 @@ import com.aeneas.it.sync._
 import com.aeneas.lang.v1.FunctionHeader
 import com.aeneas.lang.v1.compiler.Terms.FUNCTION_CALL
 import com.aeneas.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.aeneas.protobuf.Amount
-import com.aeneas.protobuf.transaction.{PBSignedTransaction, PBTransactions, Recipient}
+import com.wavesplatform.protobuf.Amount
+import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions, Recipient}
 import com.aeneas.transaction.smart.script.ScriptCompiler
 
 class InvokeScriptPayAndTransferAssetGrpcSuite extends GrpcBaseTransactionSuite {

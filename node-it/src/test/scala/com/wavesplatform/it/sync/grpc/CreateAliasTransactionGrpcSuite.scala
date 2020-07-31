@@ -6,7 +6,7 @@ import com.aeneas.it.NTPTime
 import com.aeneas.it.api.SyncGrpcApi._
 import com.aeneas.it.sync.{aliasTxSupportedVersions, minFee, transferAmount}
 import com.aeneas.it.util._
-import com.aeneas.protobuf.transaction.{PBRecipients, Recipient}
+import com.wavesplatform.protobuf.transaction.{PBRecipients, Recipient}
 import io.grpc.Status.Code
 import org.scalatest.prop.TableDrivenPropertyChecks
 

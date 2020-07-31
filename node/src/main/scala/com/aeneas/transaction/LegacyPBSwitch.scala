@@ -1,6 +1,6 @@
 package com.aeneas.transaction
 
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 
 trait LegacyPBSwitch { self: Transaction with VersionedTransaction =>
   def protobufVersion: TxVersion

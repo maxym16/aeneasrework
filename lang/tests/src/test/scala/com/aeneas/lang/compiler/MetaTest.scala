@@ -12,8 +12,8 @@ import com.aeneas.lang.v1.compiler.Types._
 import com.aeneas.lang.v1.evaluator.ctx.impl.waves.WavesContext
 import com.aeneas.lang.v1.parser.Parser
 import com.aeneas.lang.v1.testing.ScriptGen
-import com.aeneas.protobuf.dapp.DAppMeta
-import com.aeneas.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.wavesplatform.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
 import org.scalatest.{Inside, Matchers, PropSpec}
 import org.scalatestplus.scalacheck.{ScalaCheckPropertyChecks => PropertyChecks}
 

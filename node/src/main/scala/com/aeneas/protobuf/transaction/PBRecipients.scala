@@ -5,6 +5,7 @@ import com.aeneas.account._
 import com.aeneas.crypto
 import com.aeneas.lang.ValidationError
 import com.aeneas.transaction.TxValidationError.GenericError
+import com.wavesplatform.protobuf.transaction.Recipient
 
 object PBRecipients {
   def create(addressOrAlias: AddressOrAlias): Recipient = addressOrAlias match {

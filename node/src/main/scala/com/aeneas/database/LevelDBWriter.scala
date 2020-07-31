@@ -17,7 +17,7 @@ import com.aeneas.database
 import com.aeneas.database.patch.DisableHijackedAliases
 import com.aeneas.features.BlockchainFeatures
 import com.aeneas.lang.ValidationError
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.settings.{BlockchainSettings, Constants, DBSettings, WavesSettings}
 import com.aeneas.state.reader.LeaseDetails
 import com.aeneas.state.{TxNum, _}
@@ -895,7 +895,7 @@ abstract class LevelDBWriter private[database] (
   }
 
   private def transactionsAtHeight(h: Height): List[(TxNum, Transaction)] = readOnly { db =>
-    import com.aeneas.protobuf.transaction.PBSignedTransaction
+    import com.wavesplatform.protobuf.transaction.PBSignedTransaction
 
     val txs = new ListBuffer[(TxNum, Transaction)]()
 

@@ -13,7 +13,7 @@ import com.aeneas.lang.v1.FunctionHeader.{Native, User}
 import com.aeneas.lang.v1.compiler.Terms._
 import com.aeneas.lang.v1.evaluator.FunctionIds
 import com.aeneas.lang.v1.parser.Parser
-import com.aeneas.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta
 import com.aeneas.settings.TestFunctionalitySettings
 import com.aeneas.state.diffs.{ENOUGH_AMT, produce}
 import com.aeneas.transaction.Asset.Waves

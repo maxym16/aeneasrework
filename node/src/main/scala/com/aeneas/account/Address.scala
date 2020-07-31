@@ -10,9 +10,10 @@ import com.aeneas.lang.ValidationError
 import com.aeneas.transaction.TxValidationError.InvalidAddress
 import com.aeneas.utils.{ScorexLogging, base58Length}
 import play.api.libs.json._
+import scorex.crypto.hash.Blake2b256
 
 sealed trait Address extends AddressOrAlias {
-  lazy val stringRepr: String = Base58.encode(bytes)
+  lazy val stringRepr: String = Address.Prefix + Base58.encode(bytes)
 }
 
 //noinspection ScalaDeprecation
@@ -20,9 +21,11 @@ object Address extends ScorexLogging {
   val Prefix: String           = "Æx"
   val AddressVersion: Byte     = 1
   val ChecksumLength: Int      = 4
-  val HashLength: Int          = 20
+  val HashLength: Int          = 32
   val AddressLength: Int       = 1 + 1 + HashLength + ChecksumLength
+  val AddressLengthOld: Int       = 1 + HashLength + ChecksumLength//without chain Id
   val AddressStringLength: Int = base58Length(AddressLength)
+  val AddressStringLengthOld: Int = base58Length(AddressLengthOld)
 
   private[this] val publicKeyBytesCache: Cache[(ByteStr, Byte), Address] = CacheBuilder
     .newBuilder()
@@ -39,18 +42,31 @@ object Address extends ScorexLogging {
   def fromPublicKey(publicKey: PublicKey, chainId: Byte = scheme.chainId): Address = {
     publicKeyBytesCache.get(
       (publicKey, chainId), { () =>
-        val withoutChecksum = ByteBuffer
-          .allocate(1 + 1 + HashLength)
-          .put(AddressVersion)
-          .put(chainId)
-          .put(crypto.secureHash(publicKey.arr), 0, HashLength)
-          .array()
+        val bytes = chainId match {
+          case Byte.MinValue =>
+            def bytesWithVersion: Array[Byte] = AddressVersion +: publicKey.arr
+          /*
+                  ByteBuffer
+                        .allocate( 1 + HashLength)
+                        .put(AddressVersion)
+                        .put(crypto.secureHash(publicKey.arr), 0, HashLength)
+                        .array()
+          */
+            bytesWithVersion ++ calcCheckSum(bytesWithVersion)
+          case _ =>
+            val withoutChecksum = ByteBuffer
+              .allocate(1 + 1 + HashLength)
+              .put(AddressVersion)
+              .put(chainId)
+              .put(crypto.secureHash(publicKey.arr), 0, HashLength)
+              .array()
+            ByteBuffer
+              .allocate(AddressLength)
+              .put(withoutChecksum)
+              .put(calcCheckSum(withoutChecksum), 0, ChecksumLength)
+              .array()
+        }
 
-        val bytes = ByteBuffer
-          .allocate(AddressLength)
-          .put(withoutChecksum)
-          .put(calcCheckSum(withoutChecksum), 0, ChecksumLength)
-          .array()
 
         createUnsafe(bytes)
       }
@@ -62,25 +78,36 @@ object Address extends ScorexLogging {
       ByteStr(addressBytes), { () =>
         Either
           .cond(
-            addressBytes.length == Address.AddressLength,
+            addressBytes.length == Address.AddressLength || addressBytes.length == Address.AddressLengthOld || true,
             (),
-            InvalidAddress(s"Wrong addressBytes length: expected: ${Address.AddressLength}, actual: ${addressBytes.length}")
+            InvalidAddress(s"Wrong addressBytes length: expected: ${Address.AddressLength} or ${Address.AddressLengthOld}, actual: ${addressBytes.length}")
           )
           .flatMap {
             _ =>
-              val Array(version, network, _*) = addressBytes
+              if (addressBytes.length == Address.AddressLength){
+                val Array(version, network, _*) = addressBytes
 
-              (for {
-                _ <- Either.cond(version == AddressVersion, (), s"Unknown address version: $version")
-                _ <- Either.cond(
-                  network == chainId,
-                  (),
-                  s"Data from other network: expected: $chainId(${chainId.toChar}), actual: $network(${network.toChar})"
-                )
-                checkSum          = addressBytes.takeRight(ChecksumLength)
-                checkSumGenerated = calcCheckSum(addressBytes.dropRight(ChecksumLength))
-                _ <- Either.cond(java.util.Arrays.equals(checkSum, checkSumGenerated), (), s"Bad address checksum")
-              } yield createUnsafe(addressBytes)).left.map(err => InvalidAddress(err))
+                (for {
+                  _ <- Either.cond(version == AddressVersion, (), s"Unknown address version: $version")
+                  _ <- Either.cond(
+                    network == chainId,
+                    (),
+                    s"Data from other network: expected: $chainId(${chainId.toChar}), actual: $network(${network.toChar})"
+                  )
+                  checkSum          = addressBytes.takeRight(ChecksumLength)
+                  checkSumGenerated = calcCheckSum(addressBytes.dropRight(ChecksumLength))
+                  _ <- Either.cond(java.util.Arrays.equals(checkSum, checkSumGenerated), (), s"Bad address checksum")
+                } yield createUnsafe(addressBytes)).left.map(err => InvalidAddress(err))
+              } else {
+                val Array(version, _*) = addressBytes
+
+                (for {
+                  _ <- Either.cond(version == AddressVersion, (), s"Unknown address version: $version")
+                  checkSum          = addressBytes.takeRight(ChecksumLength)
+                  checkSumGenerated = calcCheckSum(addressBytes.dropRight(ChecksumLength))
+                  _ <- Either.cond(java.util.Arrays.equals(checkSum, checkSumGenerated), (), s"Bad address checksum")
+                } yield createUnsafe(addressBytes)).left.map(err => InvalidAddress(err))
+              }
           }
       }
     )
@@ -90,19 +117,16 @@ object Address extends ScorexLogging {
     val base58String = if (addressStr.startsWith(Prefix)) addressStr.drop(Prefix.length) else addressStr
     for {
       _ <- Either.cond(
-        base58String.length <= AddressStringLength,
+        base58String.length <= AddressStringLengthOld,
         (),
-        InvalidAddress(s"Wrong address string length: max=$AddressStringLength, actual: ${base58String.length}")
+        InvalidAddress(s"Wrong address string length: max=$AddressStringLengthOld, actual: ${base58String.length}")
       )
       byteArray <- Base58.tryDecodeWithLimit(base58String).toEither.left.map(ex => InvalidAddress(s"Unable to decode base58: ${ex.getMessage}"))
       address   <- fromBytes(byteArray)
     } yield address
   }
 
-  def calcCheckSum(withoutChecksum: Array[Byte]): Array[Byte] = {
-    val fullHash = crypto.secureHash(withoutChecksum)
-    fullHash.take(ChecksumLength)
-  }
+  def calcCheckSum(bytes: Array[Byte]): Array[Byte] = Blake2b256.hash(bytes).take(ChecksumLength)
 
   implicit val jsonFormat: Format[Address] = Format[Address](
     Reads(jsValue => fromString(jsValue.as[String]).fold(err => JsError(err.toString), JsSuccess(_))),

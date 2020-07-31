@@ -6,8 +6,8 @@ import com.google.common.primitives.{Bytes, Ints, Longs}
 import com.aeneas.block.Block.{GenesisBlockVersion, NgBlockVersion, PlainBlockVersion, ProtoBlockVersion, RewardBlockVersion}
 import com.aeneas.common.state.ByteStr
 import com.aeneas.common.utils._
-import com.aeneas.protobuf.transaction.{PBTransactions, SignedTransaction}
-import com.aeneas.protobuf.utils.PBUtils
+import com.wavesplatform.protobuf.transaction.{PBTransactions, SignedTransaction}
+import com.wavesplatform.protobuf.utils.PBUtils
 import com.aeneas.serialization.ByteBufferOps
 import com.aeneas.transaction.{Transaction, TransactionParsers}
 

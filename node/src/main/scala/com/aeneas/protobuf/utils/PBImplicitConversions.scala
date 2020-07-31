@@ -1,16 +1,17 @@
 package com.aeneas.protobuf.utils
-import com.google.protobuf.ByteString
 import com.aeneas.account.PublicKey
 import com.aeneas.common.state.ByteStr
 import com.aeneas.lang.ValidationError
-import com.aeneas.protobuf.Amount
-import com.aeneas.protobuf.transaction._
+import com.aeneas.protobuf.transaction.{PBAmounts, PBRecipients, VanillaAssetId}
 import com.aeneas.transaction.Asset
 import com.aeneas.transaction.Asset.{IssuedAsset, Waves}
+import com.google.protobuf.ByteString
+import com.wavesplatform.protobuf.Amount
+import com.wavesplatform.protobuf.transaction._
 
 object PBImplicitConversions {
-  import com.google.protobuf.{ByteString => PBByteString}
   import com.aeneas.account.{AddressOrAlias, Address => VAddress, Alias => VAlias}
+  import com.google.protobuf.{ByteString => PBByteString}
 
   implicit def fromAddressOrAlias(addressOrAlias: AddressOrAlias): Recipient = PBRecipients.create(addressOrAlias)
   implicit def fromAddress(address: VAddress): PBByteString                  = PBByteString.copyFrom(address.bytes)
@@ -23,6 +24,10 @@ object PBImplicitConversions {
 
   implicit class ByteStrExt(val bs: ByteStr) extends AnyVal {
     def toByteString: PBByteString = ByteString.copyFrom(bs.arr)
+  }
+
+  implicit class ByteStrExt(val bs: String) extends AnyVal {
+    def toByteString: PBByteString = ByteString.copyFrom(bs.getBytes("UTF-8"))
   }
 
   implicit class ByteStringExt(val bs: ByteString) extends AnyVal {

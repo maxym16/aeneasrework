@@ -4,7 +4,7 @@ import cats.implicits._
 import cats.data.OptionT
 import com.aeneas.lang.contract.DApp
 import com.aeneas.lang.v1.compiler.Types.FINAL
-import com.aeneas.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta
 
 object MetaMapper {
   def toProto[V <: MetaVersion](version: V)(data: List[List[FINAL]]): Either[String, DAppMeta] =

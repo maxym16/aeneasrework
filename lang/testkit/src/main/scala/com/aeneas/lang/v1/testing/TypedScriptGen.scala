@@ -8,7 +8,7 @@ import com.aeneas.lang.v1.compiler.Terms._
 import com.aeneas.lang.v1.compiler.Types._
 import com.aeneas.lang.v1.evaluator.FunctionIds._
 import com.aeneas.lang.v1.{ContractLimits, FunctionHeader}
-import com.aeneas.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta
 import org.scalacheck._
 
 trait TypedScriptGen {

@@ -16,9 +16,9 @@ import com.aeneas.lang.v1.FunctionHeader
 import com.aeneas.lang.v1.compiler.Terms
 import com.aeneas.lang.v1.compiler.Terms.FUNCTION_CALL
 import com.aeneas.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.aeneas.protobuf.Amount
-import com.aeneas.protobuf.transaction.DataTransactionData.DataEntry
-import com.aeneas.protobuf.transaction.{PBRecipients, PBSignedTransaction, PBTransactions, Recipient}
+import com.wavesplatform.protobuf.Amount
+import com.wavesplatform.protobuf.transaction.DataTransactionData.DataEntry
+import com.wavesplatform.protobuf.transaction.{PBRecipients, PBSignedTransaction, PBTransactions, Recipient}
 import com.aeneas.state.{BinaryDataEntry, BooleanDataEntry, IntegerDataEntry, StringDataEntry}
 import com.aeneas.transaction.assets.exchange.AssetPair
 import com.aeneas.transaction.smart.script.ScriptCompiler

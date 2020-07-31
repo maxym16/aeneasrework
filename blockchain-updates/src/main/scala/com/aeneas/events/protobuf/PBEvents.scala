@@ -7,12 +7,12 @@ import com.aeneas.common.state.ByteStr
 import com.aeneas.events
 import com.aeneas.events.protobuf.BlockchainUpdated.{Append => PBAppend, Rollback => PBRollback}
 import com.aeneas.events.protobuf.StateUpdate.{AssetStateUpdate, BalanceUpdate => PBBalanceUpdate, DataEntryUpdate => PBDataEntryUpdate, LeasingUpdate => PBLeasingUpdate}
-import com.aeneas.protobuf.block.{PBBlocks, PBMicroBlocks}
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.block.{PBBlocks, PBMicroBlocks}
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.transaction.Transaction
 
 object PBEvents {
-  import com.aeneas.protobuf.utils.PBImplicitConversions._
+  import com.wavesplatform.protobuf.utils.PBImplicitConversions._
 
   def protobuf(event: events.BlockchainUpdated): BlockchainUpdated =
     event match {

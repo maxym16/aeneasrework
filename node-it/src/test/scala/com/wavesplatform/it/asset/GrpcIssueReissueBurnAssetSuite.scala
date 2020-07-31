@@ -13,7 +13,7 @@ import com.aeneas.it.util._
 import com.aeneas.lang.v1.FunctionHeader
 import com.aeneas.lang.v1.compiler.Terms.{CONST_BOOLEAN, CONST_BYTESTR, CONST_LONG, FUNCTION_CALL}
 import com.aeneas.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.aeneas.protobuf.transaction.{PBRecipients, PBTransactions}
+import com.wavesplatform.protobuf.transaction.{PBRecipients, PBTransactions}
 import com.aeneas.transaction.TxVersion
 import com.aeneas.transaction.smart.SetScriptTransaction
 import com.aeneas.transaction.smart.script.ScriptCompiler

@@ -7,7 +7,7 @@ import com.aeneas.common.utils._
 import com.aeneas.history.DefaultBaseTarget
 import com.aeneas.lang.script.Script
 import com.aeneas.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.aeneas.protobuf.block.PBBlocks
+import com.wavesplatform.protobuf.block.PBBlocks
 import com.aeneas.state.StringDataEntry
 import com.aeneas.transaction.Asset.{IssuedAsset, Waves}
 import com.aeneas.transaction.assets.IssueTransaction

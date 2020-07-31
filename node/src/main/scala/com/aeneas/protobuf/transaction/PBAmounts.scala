@@ -1,6 +1,6 @@
 package com.aeneas.protobuf.transaction
 import com.google.protobuf.ByteString
-import com.aeneas.protobuf.Amount
+import com.wavesplatform.protobuf.Amount
 import com.aeneas.transaction.Asset
 import com.aeneas.transaction.Asset.{IssuedAsset, Waves}
 import com.aeneas.protobuf.utils.PBImplicitConversions._

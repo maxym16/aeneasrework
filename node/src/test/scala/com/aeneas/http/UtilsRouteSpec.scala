@@ -23,8 +23,8 @@ import com.aeneas.lang.v1.estimator.v2.ScriptEstimatorV2
 import com.aeneas.lang.v1.evaluator.ctx.impl.waves.WavesContext
 import com.aeneas.lang.v1.evaluator.ctx.impl.{CryptoContext, PureContext}
 import com.aeneas.lang.v1.traits.Environment
-import com.aeneas.protobuf.dapp.DAppMeta
-import com.aeneas.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.wavesplatform.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
 import com.aeneas.state.Blockchain
 import com.aeneas.state.diffs.FeeValidation
 import com.aeneas.transaction.smart.script.ScriptCompiler

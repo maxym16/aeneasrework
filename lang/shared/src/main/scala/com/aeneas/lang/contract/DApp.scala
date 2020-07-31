@@ -7,7 +7,7 @@ import com.aeneas.lang.v1.compiler.Terms.DECLARATION
 import com.aeneas.lang.v1.compiler.Types._
 import com.aeneas.lang.v1.compiler.{CompilationError, Terms}
 import com.aeneas.lang.v1.evaluator.ctx.impl.waves.Types
-import com.aeneas.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta
 
 case class DApp(
     meta: DAppMeta,

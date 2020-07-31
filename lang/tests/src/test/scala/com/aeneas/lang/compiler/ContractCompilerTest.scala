@@ -21,8 +21,8 @@ import com.aeneas.lang.v1.parser.Parser
 import com.aeneas.lang.v1.testing.ScriptGen
 import com.aeneas.lang.v1.traits.Environment
 import com.aeneas.lang.v1.{ContractLimits, compiler}
-import com.aeneas.protobuf.dapp.DAppMeta
-import com.aeneas.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.wavesplatform.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
 import org.scalatest.{Matchers, PropSpec}
 import org.scalatestplus.scalacheck.{ScalaCheckPropertyChecks => PropertyChecks}
 

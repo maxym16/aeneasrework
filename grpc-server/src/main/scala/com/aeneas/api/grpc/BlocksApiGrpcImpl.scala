@@ -7,7 +7,7 @@ import com.aeneas.api.common.CommonBlocksApi
 import com.aeneas.api.grpc.BlockRangeRequest.Filter
 import com.aeneas.api.grpc.BlockRequest.Request
 import com.aeneas.api.http.ApiError.BlockDoesNotExist
-import com.aeneas.protobuf.block.PBBlock
+import com.wavesplatform.protobuf.block.PBBlock
 import com.aeneas.transaction.Transaction
 import io.grpc.stub.StreamObserver
 import monix.execution.Scheduler

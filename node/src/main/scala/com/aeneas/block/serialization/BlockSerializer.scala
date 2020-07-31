@@ -9,8 +9,8 @@ import com.aeneas.block.Block.{NgBlockVersion, ProtoBlockVersion, RewardBlockVer
 import com.aeneas.block.{Block, BlockHeader}
 import com.aeneas.common.state.ByteStr
 import com.aeneas.crypto.SignatureLength
-import com.aeneas.protobuf.block.PBBlocks
-import com.aeneas.protobuf.utils.PBUtils
+import com.wavesplatform.protobuf.block.PBBlocks
+import com.wavesplatform.protobuf.utils.PBUtils
 import com.aeneas.serialization.ByteBufferOps
 import com.aeneas.transaction.Asset.Waves
 import com.aeneas.transaction.Transaction

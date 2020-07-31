@@ -5,7 +5,7 @@ import com.aeneas.account.{Address, KeyPair}
 import com.aeneas.common.utils.EitherExt2
 import com.aeneas.it.api.SyncGrpcApi._
 import com.aeneas.it.util._
-import com.aeneas.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
+import com.wavesplatform.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
 import com.aeneas.transaction.transfer.TransferTransaction
 import com.aeneas.utils.ScorexLogging
 import org.scalatest.concurrent.{IntegrationPatience, ScalaFutures}

@@ -1,14 +1,11 @@
 package com.aeneas.protobuf.transaction
 
-import com.google.protobuf.ByteString
 import com.aeneas.account.{AddressOrAlias, PublicKey}
 import com.aeneas.common.state.ByteStr
 import com.aeneas.lang.ValidationError
 import com.aeneas.lang.script.ScriptReader
 import com.aeneas.lang.v1.compiler.Terms
 import com.aeneas.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.aeneas.protobuf.Amount
-import com.aeneas.protobuf.transaction.Transaction.Data
 import com.aeneas.serialization.Deser
 import com.aeneas.state.{BinaryDataEntry, BooleanDataEntry, EmptyDataEntry, IntegerDataEntry, StringDataEntry}
 import com.aeneas.transaction.Asset.{IssuedAsset, Waves}
@@ -18,8 +15,11 @@ import com.aeneas.transaction.smart.InvokeScriptTransaction.Payment
 import com.aeneas.transaction.transfer.MassTransferTransaction
 import com.aeneas.transaction.transfer.MassTransferTransaction.ParsedTransfer
 import com.aeneas.transaction.{Proofs, TxValidationError}
-import com.aeneas.utils.StringBytes
 import com.aeneas.{transaction => vt}
+import com.google.protobuf.ByteString
+import com.wavesplatform.protobuf.Amount
+import com.wavesplatform.protobuf.transaction.Transaction.Data
+import com.wavesplatform.protobuf.transaction._
 
 import scala.util.Try
 
@@ -40,7 +40,7 @@ object PBTransactions {
       timestamp: Long = 0L,
       version: Int = 0,
       proofsArray: Seq[com.aeneas.common.state.ByteStr] = Nil,
-      data: com.aeneas.protobuf.transaction.Transaction.Data = com.aeneas.protobuf.transaction.Transaction.Data.Empty
+      data: com.wavesplatform.protobuf.transaction.Transaction.Data = com.wavesplatform.protobuf.transaction.Transaction.Data.Empty
   ): SignedTransaction =
     new SignedTransaction(
       Some(Transaction(chainId, sender.toByteString, Some((feeAssetId, fee): Amount), timestamp, version, data)),
@@ -617,8 +617,7 @@ object PBTransactions {
   }
 
   def toVanillaDataEntry(de: DataTransactionData.DataEntry): com.aeneas.state.DataEntry[_] = {
-    import DataTransactionData.DataEntry.{Value => DEV}
-
+    import com.wavesplatform.protobuf.transaction.DataTransactionData.DataEntry.{Value => DEV}
     de.value match {
       case DEV.IntValue(num)      => IntegerDataEntry(de.key, num)
       case DEV.BoolValue(bool)    => BooleanDataEntry(de.key, bool)

@@ -19,7 +19,7 @@ import com.aeneas.lang.v1.parser.BinaryOperation.NE_OP
 import com.aeneas.lang.v1.parser.Parser
 import com.aeneas.lang.v1.traits.Environment
 import com.aeneas.lang.v1.{CTX, FunctionHeader, compiler}
-import com.aeneas.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta
 import org.scalatest.{Matchers, PropSpec}
 import org.scalatestplus.scalacheck.{ScalaCheckPropertyChecks => PropertyChecks}
 

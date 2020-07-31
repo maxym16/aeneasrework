@@ -2,6 +2,7 @@ import JsApiUtils._
 import cats.kernel.Monoid
 import com.aeneas.DocSource
 import com.aeneas.common.utils.EitherExt2
+import com.aeneas.lang.Global
 import com.aeneas.lang.directives.Directive.extractDirectives
 import com.aeneas.lang.directives.values.{DApp => DAppType, _}
 import com.aeneas.lang.directives.{DirectiveDictionary, DirectiveParser, DirectiveSet}
@@ -14,7 +15,7 @@ import com.aeneas.lang.v1.repl.Repl
 import com.aeneas.lang.v1.repl.node.http.NodeConnectionSettings
 import com.aeneas.lang.v1.traits.Environment
 import com.aeneas.lang.v1.{CTX, ContractLimits}
-import com.aeneas.lang.{Global, Version}
+import com.wavesplatform.lang.Version
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

@@ -10,7 +10,7 @@ import com.aeneas.lang.utils.Serialize._
 import com.aeneas.lang.v1.Serde.desAux
 import com.aeneas.lang.v1.compiler.Terms.{DECLARATION, FUNC}
 import com.aeneas.lang.v1.{ContractLimits, Serde}
-import com.aeneas.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta
 import monix.eval.Coeval
 
 import scala.util.Try

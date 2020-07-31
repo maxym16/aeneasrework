@@ -8,9 +8,10 @@ import org.scalatestplus.scalacheck.{ScalaCheckPropertyChecks => PropertyChecks}
 class AccountOrAliasTests extends PropSpec with PropertyChecks with Matchers with EitherMatchers with Inside {
 
   property("Account should get parsed correctly") {
-    AddressOrAlias.fromString("3My3KZgFQ3CrVHgz6vGRt8687sH4oAA1qp8").explicitGet() shouldBe an[Address]
-    AddressOrAlias.fromString("address:3My3KZgFQ3CrVHgz6vGRt8687sH4oAA1qp8").explicitGet() shouldBe an[Address]
-    AddressOrAlias.fromString("Æx4dfqcEt9RrPqGyTfh5cV3Y1Pr4ynwfS3L98jPRKQkeswefWh7n").explicitGet() shouldBe an[Address]
+    AddressOrAlias.fromString("ÆxGDfUU6AdEMnbBEtHrp5qd2bsX8i9A6HhbGsW6zXR4Je5DUJBCTH").explicitGet() shouldBe an[Address]
+    AddressOrAlias.fromString("4dfqcEt9RrPqGyTfh5cV3Y1Pr4ynwfS3L98jPRKQkeswefWh7n").explicitGet() shouldBe an[Address]
+//    AddressOrAlias.fromString("Æx4dfqcEt9RrPqGyTfh5cV3Y1Pr4ynwfS3L98jPRKQkeswefWh7n").explicitGet() shouldBe an[Address]
+//    AddressOrAlias.fromString("Æx3h9vwQ9nguTwqQgjwVT4BitLCHrmiF29dDuLCxNjcpaBmpANeZ").explicitGet() shouldBe an[Address]
   }
 
   property("Alias should get parsed correctly") {

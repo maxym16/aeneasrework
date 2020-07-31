@@ -3,10 +3,10 @@ package com.aeneas.it.sync.grpc
 import com.aeneas.it.NTPTime
 import com.aeneas.it.sync._
 import com.aeneas.it.api.SyncGrpcApi._
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.it.util._
 import com.aeneas.common.utils.EitherExt2
-import com.aeneas.protobuf.transaction.Recipient
+import com.wavesplatform.protobuf.transaction.Recipient
 import io.grpc.Status.Code
 
 class ReissueTransactionGrpcSuite extends GrpcBaseTransactionSuite with NTPTime {

@@ -7,7 +7,7 @@ import com.aeneas.it.api.SyncHttpApi.AssertiveApiError
 import com.aeneas.it.util._
 import com.aeneas.lang.script.Script
 import com.aeneas.lang.v1.estimator.v2.ScriptEstimatorV2
-import com.aeneas.protobuf.transaction.{DataTransactionData, PBTransactions}
+import com.wavesplatform.protobuf.transaction.{DataTransactionData, PBTransactions}
 import com.aeneas.state.DataEntry
 import com.aeneas.transaction.assets.IssueTransaction
 import com.aeneas.transaction.smart.script.ScriptCompiler

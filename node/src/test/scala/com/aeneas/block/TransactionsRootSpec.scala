@@ -3,7 +3,7 @@ package com.aeneas.block
 import com.aeneas.account.KeyPair
 import com.aeneas.block.Block.TransactionProof
 import com.aeneas.common.merkle.Merkle._
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.transaction.Asset.Waves
 import com.aeneas.transaction.Transaction
 import com.aeneas.transaction.transfer.TransferTransaction

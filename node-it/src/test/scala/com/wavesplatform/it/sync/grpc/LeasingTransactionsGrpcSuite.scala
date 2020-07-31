@@ -4,7 +4,7 @@ import com.aeneas.it.api.SyncGrpcApi._
 import com.aeneas.it.sync._
 import com.aeneas.it.util._
 import com.aeneas.common.utils.EitherExt2
-import com.aeneas.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
+import com.wavesplatform.protobuf.transaction.{PBRecipients, PBTransactions, Recipient}
 import io.grpc.Status.Code
 
 class LeasingTransactionsGrpcSuite extends GrpcBaseTransactionSuite {

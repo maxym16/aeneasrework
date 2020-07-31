@@ -1,6 +1,6 @@
 syntax = "proto3";
 package waves;
-option java_package = "com.aeneas.protobuf.dapp";
+option java_package = "com.wavesplatform.protobuf.dapp";
 option csharp_namespace = "Waves";
 
 message DAppMeta {

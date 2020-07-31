@@ -49,6 +49,12 @@ package object crypto {
 
   def createKeyPair(seed: Array[Byte]): (Array[Byte], Array[Byte]) = Curve25519.createKeyPair(seed)
 
+  def generateKeys(randomSeed: Array[Byte]): (PrivateKey, PublicKey) = {
+    val pair = Curve25519.createKeyPair(randomSeed)
+    val secret: PrivateKey = PrivateKey(pair._1)
+    secret -> PublicKey(pair._2)
+  }
+
   // see
   // https://github.com/jedisct1/libsodium/blob/ab4ab23d5744a8e060864a7cec1a7f9b059f9ddd/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c#L17
   // https://boringssl.googlesource.com/boringssl/+/master/third_party/wycheproof_testvectors/x25519_test.json

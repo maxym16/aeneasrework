@@ -6,7 +6,7 @@ import com.aeneas.block.Block.{TransactionProof, TransactionsMerkleTree}
 import com.aeneas.common.merkle.Merkle._
 import com.aeneas.block.validation.Validators._
 import com.aeneas.common.state.ByteStr
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.settings.GenesisSettings
 import com.aeneas.transaction.Transaction
 

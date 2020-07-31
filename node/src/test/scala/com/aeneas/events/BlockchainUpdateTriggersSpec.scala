@@ -8,7 +8,7 @@ import com.aeneas.features.EstimatorProvider
 import com.aeneas.history.Domain.BlockchainUpdaterExt
 import com.aeneas.lagonaki.mocks.TestBlock
 import com.aeneas.lang.script.Script
-import com.aeneas.protobuf.utils.PBImplicitConversions.PBByteStringOps
+import com.wavesplatform.protobuf.utils.PBImplicitConversions.PBByteStringOps
 import com.aeneas.settings.{Constants, WavesSettings}
 import com.aeneas.state.diffs.ENOUGH_AMT
 import com.aeneas.state.{Blockchain, Diff, NewTransactionInfo}

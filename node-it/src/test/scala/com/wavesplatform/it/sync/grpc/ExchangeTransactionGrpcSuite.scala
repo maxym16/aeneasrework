@@ -5,7 +5,7 @@ import com.aeneas.it.NTPTime
 import com.aeneas.it.api.SyncGrpcApi._
 import com.aeneas.it.sync.{matcherFee, minFee, someAssetAmount}
 import com.aeneas.it.util._
-import com.aeneas.protobuf.transaction.{PBTransactions, Recipient}
+import com.wavesplatform.protobuf.transaction.{PBTransactions, Recipient}
 import com.aeneas.transaction.Asset.{IssuedAsset, Waves}
 import com.aeneas.transaction.TxVersion
 import com.aeneas.transaction.assets.IssueTransaction

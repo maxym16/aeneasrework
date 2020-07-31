@@ -4,7 +4,7 @@ import com.google.protobuf.ByteString
 import com.aeneas.account.KeyPair
 import com.aeneas.it.api.SyncGrpcApi._
 import com.aeneas.it.sync.minFee
-import com.aeneas.protobuf.transaction.Recipient
+import com.wavesplatform.protobuf.transaction.Recipient
 
 class GeneratingBalanceSuite extends GrpcBaseTransactionSuite {
 

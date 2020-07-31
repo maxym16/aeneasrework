@@ -8,7 +8,7 @@ import com.aeneas.database.{DBExt, openDB}
 import com.aeneas.events.BlockchainUpdateTriggers
 import com.aeneas.history.StorageFactory
 import com.aeneas.metrics.Metrics
-import com.aeneas.protobuf.block.PBBlocks
+import com.wavesplatform.protobuf.block.PBBlocks
 import com.aeneas.state.Height
 import com.aeneas.utils._
 import kamon.Kamon

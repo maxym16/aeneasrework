@@ -9,8 +9,8 @@ import com.aeneas.lang.v1.compiler.Terms
 import com.aeneas.lang.v1.compiler.Terms.{ARR, CONST_LONG, CaseObj}
 import com.aeneas.lang.v1.compiler.Types.CASETYPEREF
 import com.aeneas.lang.v1.{ContractLimits, FunctionHeader, Serde}
-import com.aeneas.protobuf.transaction._
-import com.aeneas.protobuf.{Amount, transaction}
+import com.wavesplatform.protobuf.transaction._
+import com.wavesplatform.protobuf.{Amount, transaction}
 import com.aeneas.serialization.Deser
 import com.aeneas.transaction.Asset.{IssuedAsset, Waves}
 import com.aeneas.transaction.TxValidationError.NonPositiveAmount

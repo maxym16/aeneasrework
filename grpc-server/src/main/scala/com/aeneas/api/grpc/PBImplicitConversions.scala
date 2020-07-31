@@ -6,8 +6,8 @@ import com.aeneas.block.BlockHeader
 import com.aeneas.common.state.ByteStr
 import com.aeneas.common.utils._
 import com.aeneas.lang.ValidationError
-import com.aeneas.protobuf.block.{PBBlock, PBBlocks, VanillaBlock}
-import com.aeneas.protobuf.transaction._
+import com.wavesplatform.protobuf.block.{PBBlock, PBBlocks, VanillaBlock}
+import com.wavesplatform.protobuf.transaction._
 import com.aeneas.{block => vb}
 
 //noinspection ScalaStyle

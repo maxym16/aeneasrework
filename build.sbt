@@ -21,7 +21,7 @@ val langPublishSettings = Seq(
 )
 
 lazy val lang =
-  crossProject(JSPlatform, JVMPlatform)
+  crossProject(JVMPlatform)
     .withoutSuffixFor(JVMPlatform)
     .crossType(CrossType.Full)
     .settings(
@@ -45,12 +45,6 @@ lazy val `lang-jvm` = lang.jvm
     normalizedName := "lang",
     description := "The RIDE smart contract language compiler",
     libraryDependencies += "org.scala-js" %% "scalajs-stubs" % "1.0.0" % Provided
-  )
-
-lazy val `lang-js` = lang.js
-  .enablePlugins(VersionObject)
-  .settings(
-    libraryDependencies += Dependencies.circeJsInterop.value
   )
 
 lazy val `lang-testkit` = project
@@ -81,7 +75,7 @@ lazy val `blockchain-updates` = project.dependsOn(node % "compile;test->test;run
 
 lazy val root = (project in file("."))
   .aggregate(
-    `lang-js`,
+    /*`lang-js`,*/
     `lang-jvm`,
     `lang-tests`,
     `lang-testkit`,
@@ -145,15 +139,22 @@ inScope(Global)(
 git.useGitDescribe := true
 git.uncommittedSignifier := Some("DIRTY")
 
+assemblyMergeStrategy in assembly := {
+  case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+  case x => MergeStrategy.first
+}
+
 lazy val packageAll = taskKey[Unit]("Package all artifacts")
 packageAll := Def
   .sequential(
     root / clean,
     Def.task {
       (node / assembly).value
+/*
       (node / Debian / packageBin).value
       (`grpc-server` / Universal / packageZipTarball).value
       (`grpc-server` / Debian / packageBin).value
+*/
     }
   )
   .value
@@ -165,7 +166,7 @@ checkPRRaw := Def
     Def.task {
       (Test / compile).value
       (`lang-tests` / Test / test).value
-      (`lang-js` / Compile / fastOptJS).value
+      //(`lang-js` / Compile / fastOptJS).value
       (node / Test / test).value
     }
   )

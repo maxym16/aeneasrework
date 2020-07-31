@@ -10,7 +10,7 @@ import com.aeneas.common.utils.EitherExt2
 import com.aeneas.it.api.TransactionStatus
 import com.aeneas.it.{Node, NodeConfigs}
 import com.aeneas.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.aeneas.protobuf.transaction.{PBSignedTransaction, PBTransactions}
+import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions}
 import com.aeneas.transaction.assets.exchange.{AssetPair, ExchangeTransaction, Order}
 import com.aeneas.transaction.smart.script.ScriptCompiler
 import com.aeneas.transaction.{Asset, TxVersion}

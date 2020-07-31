@@ -7,8 +7,8 @@ import com.aeneas.TransactionGen
 import com.aeneas.common.state.ByteStr
 import com.aeneas.common.utils.EitherExt2
 import com.aeneas.mining.MiningConstraints
-import com.aeneas.protobuf.block._
-import com.aeneas.protobuf.transaction._
+import com.wavesplatform.protobuf.block._
+import com.wavesplatform.protobuf.transaction._
 import com.aeneas.transaction.Asset.IssuedAsset
 import com.aeneas.transaction.smart.SetScriptTransaction
 import com.aeneas.transaction.{DataTransaction, Proofs, TxVersion}

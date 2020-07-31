@@ -1,8 +1,8 @@
 package com.aeneas.transaction.serialization.impl
 
 import cats.implicits._
-import com.aeneas.protobuf.transaction.{PBTransactions, SignedTransaction => PBSignedTransaction}
-import com.aeneas.protobuf.utils.PBUtils
+import com.wavesplatform.protobuf.transaction.{PBTransactions, SignedTransaction => PBSignedTransaction}
+import com.wavesplatform.protobuf.utils.PBUtils
 import com.aeneas.transaction.{PBParsingError, Transaction}
 
 import scala.util.Try

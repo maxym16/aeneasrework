@@ -5,7 +5,7 @@ import com.aeneas.account.{Address, Alias}
 import com.aeneas.api.BlockMeta
 import com.aeneas.common.state.ByteStr
 import com.aeneas.common.utils.EitherExt2
-import com.aeneas.protobuf.transaction.PBRecipients
+import com.wavesplatform.protobuf.transaction.PBRecipients
 import com.aeneas.state._
 import com.aeneas.transaction.Asset.IssuedAsset
 import com.aeneas.transaction.Transaction

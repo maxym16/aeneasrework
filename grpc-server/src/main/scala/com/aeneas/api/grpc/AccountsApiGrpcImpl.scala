@@ -5,8 +5,8 @@ import com.google.protobuf.wrappers.{BytesValue, StringValue}
 import com.aeneas.account.{Address, Alias}
 import com.aeneas.api.common.CommonAccountsApi
 import com.aeneas.common.state.ByteStr
-import com.aeneas.protobuf.Amount
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.Amount
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.transaction.Asset
 import io.grpc.stub.StreamObserver
 import monix.execution.Scheduler

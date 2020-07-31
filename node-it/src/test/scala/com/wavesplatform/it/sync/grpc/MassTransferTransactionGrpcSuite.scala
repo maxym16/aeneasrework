@@ -4,8 +4,8 @@ import com.google.protobuf.ByteString
 import com.aeneas.common.utils.EitherExt2
 import com.aeneas.it.api.SyncGrpcApi._
 import com.aeneas.it.sync._
-import com.aeneas.protobuf.transaction.MassTransferTransactionData.Transfer
-import com.aeneas.protobuf.transaction.{PBTransactions, Recipient}
+import com.wavesplatform.protobuf.transaction.MassTransferTransactionData.Transfer
+import com.wavesplatform.protobuf.transaction.{PBTransactions, Recipient}
 import com.aeneas.transaction.transfer.MassTransferTransaction.MaxTransferCount
 import com.aeneas.transaction.transfer.TransferTransaction.MaxAttachmentSize
 import io.grpc.Status.Code

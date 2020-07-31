@@ -9,7 +9,7 @@ import com.aeneas.block.Block
 import com.aeneas.common.state.ByteStr
 import com.aeneas.common.utils._
 import com.aeneas.database.{LevelDBWriter, openDB}
-import com.aeneas.protobuf.transaction.PBRecipients
+import com.wavesplatform.protobuf.transaction.PBRecipients
 import com.aeneas.state.{Diff, Portfolio}
 import com.aeneas.transaction.Asset.IssuedAsset
 import com.aeneas.transaction.assets.IssueTransaction

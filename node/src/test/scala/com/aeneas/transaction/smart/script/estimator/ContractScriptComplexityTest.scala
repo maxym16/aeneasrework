@@ -10,7 +10,7 @@ import com.aeneas.lang.v1.compiler.Terms._
 import com.aeneas.lang.v1.estimator.ScriptEstimator
 import com.aeneas.lang.v1.evaluator.ctx.impl.PureContext._
 import com.aeneas.lang.v1.testing.TypedScriptGen
-import com.aeneas.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta
 import org.scalatest.{Matchers, PropSpec}
 import org.scalatestplus.scalacheck.{ScalaCheckPropertyChecks => PropertyChecks}
 

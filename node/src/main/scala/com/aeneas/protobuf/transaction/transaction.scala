@@ -1,17 +1,17 @@
 package com.aeneas.protobuf
 
 package object transaction {
-  type PBOrder = com.aeneas.protobuf.order.Order
-  val PBOrder = com.aeneas.protobuf.order.Order
+  type PBOrder = com.wavesplatform.protobuf.order.Order
+  val PBOrder = com.wavesplatform.protobuf.order.Order
 
   type VanillaOrder = com.aeneas.transaction.assets.exchange.Order
   val VanillaOrder = com.aeneas.transaction.assets.exchange.Order
 
-  type PBTransaction = com.aeneas.protobuf.transaction.Transaction
-  val PBTransaction = com.aeneas.protobuf.transaction.Transaction
+  type PBTransaction = com.wavesplatform.protobuf.transaction.Transaction
+  val PBTransaction = com.wavesplatform.protobuf.transaction.Transaction
 
-  type PBSignedTransaction = com.aeneas.protobuf.transaction.SignedTransaction
-  val PBSignedTransaction = com.aeneas.protobuf.transaction.SignedTransaction
+  type PBSignedTransaction = com.wavesplatform.protobuf.transaction.SignedTransaction
+  val PBSignedTransaction = com.wavesplatform.protobuf.transaction.SignedTransaction
 
   type VanillaTransaction = com.aeneas.transaction.Transaction
   val VanillaTransaction = com.aeneas.transaction.Transaction

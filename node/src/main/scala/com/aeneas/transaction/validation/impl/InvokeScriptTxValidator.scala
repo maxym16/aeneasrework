@@ -5,7 +5,7 @@ import cats.data.Validated.{Invalid, Valid}
 import cats.implicits._
 import com.aeneas.lang.v1.compiler.Terms.FUNCTION_CALL
 import com.aeneas.lang.v1.{ContractLimits, FunctionHeader}
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.transaction.TxValidationError.{GenericError, NonPositiveAmount, TooBigArray}
 import com.aeneas.transaction.smart.InvokeScriptTransaction
 import com.aeneas.transaction.smart.InvokeScriptTransaction.Payment

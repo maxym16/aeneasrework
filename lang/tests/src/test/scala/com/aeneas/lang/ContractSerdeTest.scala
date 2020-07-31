@@ -8,8 +8,8 @@ import com.aeneas.lang.contract.DApp._
 import com.aeneas.lang.contract.{ContractSerDe, DApp}
 import com.aeneas.lang.v1.ContractLimits
 import com.aeneas.lang.v1.compiler.Terms._
-import com.aeneas.protobuf.dapp.DAppMeta
-import com.aeneas.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.wavesplatform.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
 import org.scalatest.{Assertion, FreeSpec, Matchers}
 import org.scalatestplus.scalacheck.{ScalaCheckPropertyChecks => PropertyChecks}
 

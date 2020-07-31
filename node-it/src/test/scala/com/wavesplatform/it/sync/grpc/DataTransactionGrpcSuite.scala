@@ -6,8 +6,8 @@ import com.aeneas.common.utils.EitherExt2
 import com.aeneas.it.api.SyncGrpcApi._
 import com.aeneas.it.sync.{dataTxSupportedVersions, minFee}
 import com.aeneas.it.util._
-import com.aeneas.protobuf.transaction.DataTransactionData.DataEntry
-import com.aeneas.protobuf.transaction.{DataTransactionData, PBRecipients, PBTransactions, Recipient}
+import com.wavesplatform.protobuf.transaction.DataTransactionData.DataEntry
+import com.wavesplatform.protobuf.transaction.{DataTransactionData, PBRecipients, PBTransactions, Recipient}
 import com.aeneas.transaction.TxVersion
 import io.grpc.Status.Code
 

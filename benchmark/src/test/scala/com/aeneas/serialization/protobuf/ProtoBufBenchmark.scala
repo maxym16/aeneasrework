@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit
 
 import com.aeneas.account.PublicKey
 import com.aeneas.common.state.ByteStr
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.transaction.Asset.Waves
 import com.aeneas.transaction.Proofs
 import com.aeneas.transaction.transfer.MassTransferTransaction

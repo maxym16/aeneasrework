@@ -7,8 +7,8 @@ import com.aeneas.common.state.ByteStr
 import com.aeneas.crypto
 import com.aeneas.crypto._
 import com.aeneas.lang.ValidationError
-import com.aeneas.protobuf.block.{PBBlockHeaders, PBBlocks}
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.block.{PBBlockHeaders, PBBlocks}
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.settings.GenesisSettings
 import com.aeneas.state._
 import com.aeneas.transaction.TxValidationError.GenericError

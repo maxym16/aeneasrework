@@ -5,10 +5,10 @@ import com.google.protobuf.ByteString
 import com.aeneas.account.Address
 import com.aeneas.common.utils._
 import com.aeneas.lang.v1.traits.domain.{Burn, Issue, Reissue, SponsorFee}
-import com.aeneas.protobuf.Amount
-import com.aeneas.protobuf.transaction.{PBAmounts, PBTransactions, InvokeScriptResult => PBInvokeScriptResult}
-import com.aeneas.protobuf.utils.PBImplicitConversions._
-import com.aeneas.protobuf.utils.PBUtils
+import com.wavesplatform.protobuf.Amount
+import com.wavesplatform.protobuf.transaction.{PBAmounts, PBTransactions, InvokeScriptResult => PBInvokeScriptResult}
+import com.wavesplatform.protobuf.utils.PBImplicitConversions._
+import com.wavesplatform.protobuf.utils.PBUtils
 import com.aeneas.state.InvokeScriptResult.ErrorMessage
 import com.aeneas.transaction.Asset
 import com.aeneas.transaction.Asset.Waves

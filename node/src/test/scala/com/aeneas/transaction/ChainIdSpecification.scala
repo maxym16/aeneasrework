@@ -4,7 +4,7 @@ import com.google.protobuf.ByteString
 import com.aeneas.account._
 import com.aeneas.common.state.ByteStr
 import com.aeneas.common.utils.{Base58, EitherExt2}
-import com.aeneas.protobuf.transaction.{PBTransactions, SignedTransaction => PBSignedTransaction}
+import com.wavesplatform.protobuf.transaction.{PBTransactions, SignedTransaction => PBSignedTransaction}
 import com.aeneas.state.StringDataEntry
 import com.aeneas.transaction.Asset.{IssuedAsset, Waves}
 import com.aeneas.transaction.TxValidationError.GenericError

@@ -1,7 +1,7 @@
 package com.aeneas.api.grpc
 
 import com.aeneas.api.common.CommonTransactionsApi
-import com.aeneas.protobuf.transaction._
+import com.wavesplatform.protobuf.transaction._
 import com.aeneas.transaction.Authorized
 import io.grpc.stub.StreamObserver
 import io.grpc.{Status, StatusRuntimeException}

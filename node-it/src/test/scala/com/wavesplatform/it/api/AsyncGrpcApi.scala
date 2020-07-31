@@ -15,8 +15,8 @@ import com.aeneas.it.util._
 import com.aeneas.lang.script.{Script => Scr}
 import com.aeneas.lang.v1.Serde
 import com.aeneas.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.aeneas.protobuf.Amount
-import com.aeneas.protobuf.block.PBBlocks
+import com.wavesplatform.protobuf.Amount
+import com.wavesplatform.protobuf.block.PBBlocks
 import com.aeneas.serialization.Deser
 import com.aeneas.transaction.Asset.Waves
 import com.aeneas.transaction.assets.exchange.Order
@@ -33,7 +33,7 @@ import scala.concurrent.duration._
 object AsyncGrpcApi {
   implicit class NodeAsyncGrpcApi(val n: Node) {
 
-    import com.aeneas.protobuf.transaction.{Transaction => PBTransaction, _}
+    import com.wavesplatform.protobuf.transaction.{Transaction => PBTransaction, _}
     import monix.execution.Scheduler.Implicits.global
 
     private[this] lazy val assets       = AssetsApiGrpc.stub(n.grpcChannel)

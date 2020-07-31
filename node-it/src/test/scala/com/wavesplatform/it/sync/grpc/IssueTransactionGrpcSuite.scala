@@ -6,7 +6,7 @@ import com.aeneas.it.api.SyncGrpcApi._
 import com.aeneas.it.sync._
 import com.aeneas.it.util._
 import com.aeneas.lang.script.Script
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.transaction.assets.IssueTransaction
 import io.grpc.Status.Code
 import org.scalatest.prop.TableDrivenPropertyChecks

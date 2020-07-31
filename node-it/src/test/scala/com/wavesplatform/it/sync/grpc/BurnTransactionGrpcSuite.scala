@@ -3,7 +3,7 @@ package com.aeneas.it.sync.grpc
 import com.aeneas.common.utils.EitherExt2
 import com.aeneas.it.api.SyncGrpcApi._
 import com.aeneas.it.sync._
-import com.aeneas.protobuf.transaction.{PBTransactions, Recipient}
+import com.wavesplatform.protobuf.transaction.{PBTransactions, Recipient}
 import io.grpc.Status.Code
 
 class BurnTransactionGrpcSuite extends GrpcBaseTransactionSuite {

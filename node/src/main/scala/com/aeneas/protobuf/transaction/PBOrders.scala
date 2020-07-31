@@ -1,6 +1,6 @@
 package com.aeneas.protobuf.transaction
 import com.aeneas.account.{AddressScheme, PublicKey}
-import com.aeneas.protobuf.order.AssetPair
+import com.wavesplatform.protobuf.order.AssetPair
 import com.aeneas.{transaction => vt}
 
 object PBOrders {

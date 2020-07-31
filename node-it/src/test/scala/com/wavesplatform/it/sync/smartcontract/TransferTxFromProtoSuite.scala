@@ -8,7 +8,7 @@ import com.aeneas.it.sync._
 import com.aeneas.it.transactions.BaseTransactionSuite
 import com.aeneas.lang.v1.compiler.Terms
 import com.aeneas.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.transaction.Asset.{IssuedAsset, Waves}
 import com.aeneas.transaction.TxVersion
 import com.aeneas.transaction.smart.script.ScriptCompiler

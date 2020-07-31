@@ -19,8 +19,8 @@ import com.aeneas.crypto._
 import com.aeneas.database.protobuf.DataEntry.Value
 import com.aeneas.database.{protobuf => pb}
 import com.aeneas.lang.script.{Script, ScriptReader}
-import com.aeneas.protobuf.block.PBBlocks
-import com.aeneas.protobuf.transaction.{PBSignedTransaction, PBTransactions}
+import com.wavesplatform.protobuf.block.PBBlocks
+import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions}
 import com.aeneas.state._
 import com.aeneas.transaction.Asset.IssuedAsset
 import com.aeneas.transaction.lease.LeaseTransaction

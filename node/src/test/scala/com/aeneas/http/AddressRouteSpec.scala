@@ -15,8 +15,8 @@ import com.aeneas.lang.directives.values.V3
 import com.aeneas.lang.script.ContractScript
 import com.aeneas.lang.script.v1.ExprScript
 import com.aeneas.lang.v1.compiler.Terms._
-import com.aeneas.protobuf.dapp.DAppMeta
-import com.aeneas.protobuf.dapp.DAppMeta.CallableFuncSignature
+import com.wavesplatform.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta.CallableFuncSignature
 import com.aeneas.state.diffs.FeeValidation
 import com.aeneas.state.{AccountScriptInfo, Blockchain}
 import com.aeneas.utils.Schedulers

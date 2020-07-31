@@ -10,8 +10,8 @@ import com.aeneas.common.utils.{Base64, EitherExt2}
 import com.aeneas.lang.v1.FunctionHeader.User
 import com.aeneas.lang.v1.compiler.Terms.{CONST_LONG, FUNCTION_CALL}
 import com.aeneas.network.UtxPoolSynchronizer
-import com.aeneas.protobuf.transaction.{PBSignedTransaction, PBTransactions}
-import com.aeneas.protobuf.utils.PBUtils
+import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions}
+import com.wavesplatform.protobuf.utils.PBUtils
 import com.aeneas.settings.Constants
 import com.aeneas.state.Blockchain
 import com.aeneas.transaction.Asset.IssuedAsset

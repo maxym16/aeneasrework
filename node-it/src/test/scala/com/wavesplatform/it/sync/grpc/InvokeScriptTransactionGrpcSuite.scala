@@ -12,8 +12,8 @@ import com.aeneas.lang.v1.FunctionHeader
 import com.aeneas.lang.v1.compiler.Terms.{CONST_BYTESTR, FUNCTION_CALL}
 import com.aeneas.lang.v1.estimator.v2.ScriptEstimatorV2
 import com.aeneas.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.aeneas.protobuf.transaction.DataTransactionData.DataEntry
-import com.aeneas.protobuf.transaction.{PBTransactions, PBRecipients, Recipient}
+import com.wavesplatform.protobuf.transaction.DataTransactionData.DataEntry
+import com.wavesplatform.protobuf.transaction.{PBTransactions, PBRecipients, Recipient}
 import com.aeneas.transaction.TxVersion
 import com.aeneas.transaction.smart.script.ScriptCompiler
 import io.grpc.Status.Code

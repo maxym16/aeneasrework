@@ -10,7 +10,7 @@ import com.aeneas.api.common.AddressPortfolio
 import com.aeneas.common.state.ByteStr
 import com.aeneas.common.utils.{Base58, Base64, EitherExt2}
 import com.aeneas.database.{DBExt, KeyTags, Keys, LevelDBWriter, openDB, readTransactionBytes}
-import com.aeneas.protobuf.transaction.{PBSignedTransaction, PBTransactions}
+import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions}
 import com.aeneas.settings.Constants
 import com.aeneas.state.{Blockchain, Diff, Height, Portfolio, TxNum}
 import com.aeneas.transaction.Asset.IssuedAsset

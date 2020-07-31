@@ -7,7 +7,7 @@ import com.aeneas.common.utils.{Base64, EitherExt2}
 import com.aeneas.lang.contract.DApp
 import com.aeneas.lang.directives.values._
 import com.aeneas.lang.script.{ContractScript, Script}
-import com.aeneas.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta
 import com.aeneas.transaction.Asset.IssuedAsset
 import com.aeneas.transaction.assets.SetAssetScriptTransaction
 import org.scalacheck.Gen

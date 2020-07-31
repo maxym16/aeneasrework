@@ -1,6 +1,6 @@
 package com.aeneas.protobuf.block
-import com.google.protobuf.ByteString
 import com.aeneas.protobuf.utils.PBUtils
+import com.google.protobuf.ByteString
 
 private[block] object PBBlockSerialization {
   def signedBytes(block: PBBlock): Array[Byte] = {

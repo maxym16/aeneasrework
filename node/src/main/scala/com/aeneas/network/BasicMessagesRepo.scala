@@ -13,8 +13,8 @@ import com.aeneas.mining.Miner.MaxTransactionsPerMicroblock
 import com.aeneas.mining.MiningConstraints
 import com.aeneas.network.message.Message._
 import com.aeneas.network.message._
-import com.aeneas.protobuf.block.{PBBlock, PBBlocks, PBMicroBlocks, SignedMicroBlock}
-import com.aeneas.protobuf.transaction.{PBSignedTransaction, PBTransactions}
+import com.wavesplatform.protobuf.block.{PBBlock, PBBlocks, PBMicroBlocks, SignedMicroBlock}
+import com.wavesplatform.protobuf.transaction.{PBSignedTransaction, PBTransactions}
 import com.aeneas.transaction.{DataTransaction, Transaction, TransactionParsers}
 
 import scala.util.Try

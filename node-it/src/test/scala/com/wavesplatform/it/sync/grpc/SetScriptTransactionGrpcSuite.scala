@@ -10,8 +10,8 @@ import com.aeneas.it.sync.smartcontract.setScrTxSupportedVersions
 import com.aeneas.lang.script.Script
 import com.aeneas.lang.v1.estimator.v2.ScriptEstimatorV2
 import com.aeneas.lang.v1.estimator.v3.ScriptEstimatorV3
-import com.aeneas.protobuf.Amount
-import com.aeneas.protobuf.transaction.{PBTransactions, Recipient, SetScriptTransactionData, SignedTransaction, TransferTransactionData, Transaction => PBTransaction}
+import com.wavesplatform.protobuf.Amount
+import com.wavesplatform.protobuf.transaction.{PBTransactions, Recipient, SetScriptTransactionData, SignedTransaction, TransferTransactionData, Transaction => PBTransaction}
 import com.aeneas.transaction.smart.script.ScriptCompiler
 import io.grpc.Status.Code
 

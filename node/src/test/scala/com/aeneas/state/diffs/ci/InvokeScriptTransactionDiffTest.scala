@@ -27,7 +27,7 @@ import com.aeneas.lang.v1.parser.{Expressions, Parser}
 import com.aeneas.lang.v1.traits.Environment
 import com.aeneas.lang.v1.{ContractLimits, FunctionHeader, compiler}
 import com.aeneas.lang.{Global, utils}
-import com.aeneas.protobuf.dapp.DAppMeta
+import com.wavesplatform.protobuf.dapp.DAppMeta
 import com.aeneas.settings.{TestFunctionalitySettings, TestSettings}
 import com.aeneas.state._
 import com.aeneas.state.diffs.FeeValidation.FeeConstants

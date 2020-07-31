@@ -1,7 +1,7 @@
 package com.aeneas.transaction
 
 import com.aeneas.common.state.ByteStr
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.transaction.Asset.IssuedAsset
 import monix.eval.Coeval
 import play.api.libs.json.JsObject

@@ -8,7 +8,7 @@ import com.aeneas.common.state.ByteStr
 import com.aeneas.database.{DBExt, KeyTags, Keys}
 import com.aeneas.features.BlockchainFeatures
 import com.aeneas.lang.ValidationError
-import com.aeneas.protobuf.transaction.PBRecipients
+import com.wavesplatform.protobuf.transaction.PBRecipients
 import com.aeneas.state.{AccountScriptInfo, AssetDescription, Blockchain, DataEntry, Diff, Height}
 import com.aeneas.transaction.Asset.IssuedAsset
 import com.aeneas.transaction.lease.LeaseTransaction

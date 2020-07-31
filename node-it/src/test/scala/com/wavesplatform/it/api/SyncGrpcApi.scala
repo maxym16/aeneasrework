@@ -12,10 +12,10 @@ import com.aeneas.it.Node
 import com.aeneas.it.api.SyncHttpApi.RequestAwaitTime
 import com.aeneas.lang.script.Script
 import com.aeneas.lang.v1.compiler.Terms.FUNCTION_CALL
-import com.aeneas.protobuf.Amount
-import com.aeneas.protobuf.block.Block.Header
-import com.aeneas.protobuf.block.{PBBlocks, VanillaBlock}
-import com.aeneas.protobuf.transaction._
+import com.wavesplatform.protobuf.Amount
+import com.wavesplatform.protobuf.block.Block.Header
+import com.wavesplatform.protobuf.block.{PBBlocks, VanillaBlock}
+import com.wavesplatform.protobuf.transaction._
 import com.aeneas.transaction.Asset.Waves
 import com.aeneas.transaction.assets.exchange.Order
 import com.aeneas.transaction.{Asset, TxVersion}

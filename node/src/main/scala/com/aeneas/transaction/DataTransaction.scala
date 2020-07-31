@@ -3,7 +3,7 @@ package com.aeneas.transaction
 import com.aeneas.account.{AddressScheme, KeyPair, PrivateKey, PublicKey}
 import com.aeneas.crypto
 import com.aeneas.lang.ValidationError
-import com.aeneas.protobuf.transaction.PBTransactions
+import com.wavesplatform.protobuf.transaction.PBTransactions
 import com.aeneas.state._
 import com.aeneas.transaction.serialization.impl.DataTxSerializer
 import com.aeneas.transaction.validation.TxValidator

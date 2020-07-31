@@ -15,7 +15,7 @@ import com.aeneas.features.BlockchainFeatures
 import com.aeneas.history.chainBaseAndMicro
 import com.aeneas.lagonaki.mocks.TestBlock
 import com.aeneas.lang.ValidationError
-import com.aeneas.protobuf.block.PBBlocks
+import com.wavesplatform.protobuf.block.PBBlocks
 import com.aeneas.settings.{Constants, FunctionalitySettings, TestFunctionalitySettings, WalletSettings, WavesSettings}
 import com.aeneas.state.appender.BlockAppender
 import com.aeneas.state.{Blockchain, BlockchainUpdaterImpl, NG, diffs}
